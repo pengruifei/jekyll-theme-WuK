@@ -27,7 +27,7 @@
   {% unless sidebar_disable %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}/>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.jekyll-theme-WuK.sidebar_open || page.title = "Home" %} checked{% endif %}/>
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     {% if site.jekyll-theme-WuK.default.sidebar.avatar.enable %}
