@@ -19,7 +19,8 @@
 </head>
 
 <body
-  class="{{ site.jekyll-theme-WuK.default.body.theme-base }}{% if site.jekyll-theme-WuK.default.body.layout-reverse %} layout-reverse{% endif %}{% if site.jekyll-theme-WuK.default.body.sidebar-overlay %} sidebar-overlay{% endif %}">
+  class="{{ site.jekyll-theme-WuK.default.body.theme-base }}{% if site.jekyll-theme-WuK.default.body.layout-reverse %} layout-reverse{% endif %}{% if site.jekyll-theme-WuK.default.body.sidebar-overlay %} 
+         {% endif %}">
   {% assign sidebar_disable = false %}
   {% if site.jekyll-theme-WuK.default.sidebar.disable or page.jekyll-theme-WuK.sidebar_disable %}
   {% assign sidebar_disable = true %}
@@ -27,7 +28,7 @@
   {% unless sidebar_disable %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.jekyll-theme-WuK.sidebar_open || page.title = "Home" %} checked{% endif %}/>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if site.jekyll-theme-WuK.default.sidebar.open or page.jekyll-theme-WuK.sidebar_open %} checked{% endif %}/>
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     {% if site.jekyll-theme-WuK.default.sidebar.avatar.enable %}
